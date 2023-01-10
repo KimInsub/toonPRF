@@ -3,7 +3,8 @@
 Basic analysis script for estimating pRF in human visual cortex. Most of the scripts were written by Dawn Finzi
 
 ### Dependencies
-vistasoft (https://github.com/vistalab/vistasoft)
+
+- [Vistasoft](https://github.com/vistalab/vistasoft)
 
 ### MRI data and ROIs
 
