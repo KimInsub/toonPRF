@@ -9,6 +9,8 @@ vistasoft (https://github.com/vistalab/vistasoft)
 You can download NIfTI MRI files and pre-drawn ROIs of a test participant here: https://osf.io/zvb58/ 
 
 ### Analysis steps
+
+pRF_workflow.m
 1) Initialization
 2) Stimulus inspection (Finzi et al, 2021)
 3) Align inplane anatomy to volume anatomy
