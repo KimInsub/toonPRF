@@ -6,7 +6,8 @@ Basic analysis script for estimating pRF in human visual cortex. Most of the scr
 vistasoft (https://github.com/vistalab/vistasoft)
 
 ### MRI data and ROIs
-You can download NIfTI MRI files and pre-drawn ROIs of a test participant here: https://osf.io/zvb58/ 
+
+NIfTI MRI files (toonPRF/data/subj02/raw) and pre-drawn ROIs (toonPRF/data/subj02/3DAnatomy) of a test participant are included in this repo
 
 ### Analysis steps
 
