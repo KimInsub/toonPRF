@@ -7,11 +7,13 @@ vistasoft (https://github.com/vistalab/vistasoft)
 
 ### MRI data and ROIs
 
-NIfTI MRI files (toonPRF/data/subj02/raw) and pre-drawn ROIs (toonPRF/data/subj02/3DAnatomy) of a test participant are included in this repo
+- [NIfTI MRI files](https://github.com/KimInsub/toonPRF/tree/main/data/subj02/raw)
+- [pre-drawn ROIs](https://github.com/KimInsub/toonPRF/tree/main/data/subj02/3DAnatomy/ROIs)
 
 ### Analysis steps
 
 pRF_workflow.m
+
 1) Initialization
 2) Stimulus inspection (Finzi et al, 2021)
 3) Align inplane anatomy to volume anatomy
