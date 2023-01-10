@@ -1,6 +1,6 @@
 # toonPRF tutorial for PSYCH204A
 
-Basic analysis script for estimating pRF in human visual cortex. Most of the scripts were written by Dawn Finzi
+Analysis script for estimating pRF in human visual cortex. Most of the scripts were written by Dawn Finzi
 
 ### Dependencies
 
