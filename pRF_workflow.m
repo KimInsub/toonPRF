@@ -4,6 +4,7 @@
 
 %% enviornment setting
 % cd /oak/stanford/groups/kalanit/biac2/kgs/projects/insub/toonPRF
+% addpath(genpath('/Users/insubkim/spm12'));
 
 % initialize
 baseDir = initPath();
@@ -14,7 +15,6 @@ if ~exist('./vistasoft', 'dir')
 end
 
 addpath(genpath('./vistasoft')); % add vistasoft
-addpath(genpath('/Users/insubkim/spm12'));
 
 %% set path for data
 cd(baseDir)
