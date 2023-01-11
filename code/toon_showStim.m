@@ -13,13 +13,9 @@ function toon_showStim(path,stimFile)
 % KGS & DF 2020
 
 if notDefined('path')
-    if isunix
-     path=fullfile('/biac2','kgs','projects', 'lateralPRFs', 'data', 'toonRet', 'aj092118_ret' , 'Stimuli');
-    else
-       fprintf('Error: need to specify path..\n');
-    end
-    
+    error("No path to data specified.");
 end
+
 if notDefined('stimFile')
     stimFile='8bars_images.mat';
 end

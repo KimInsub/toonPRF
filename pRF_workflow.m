@@ -3,32 +3,24 @@
 % Modified by Insub 
 
 %% enviornment setting
-% Insub: This should either be explained or deleted: DJC
-% cd /oak/stanford/groups/kalanit/biac2/kgs/projects/insub/toonPRF
-% addpath(genpath('/Users/insubkim/spm12'));
 
-
-% initialize
+% initialize the path to the experiment data
 baseDir = initPath();
 
 % Vistasoft is the set of tools provided by Vistalab for analyzing MR images
-
-% clone Vistasoft from github _if_ it isn't already in our path
+% clone from github _if_ it isn't already in our path
 if isempty(which('vistaRootPath')) && ~exist(fullfile('.','vistasoft'), 'dir')
     system('git clone https://github.com/vistalab/vistasoft.git')
-    addpath(genpath(fullpath('.','vistasoft'))); % add vistasoft
+    addpath(genpath(fullpath('.','vistasoft'))); % add vistasoft to our path
 end
-
 
 %% set path for data
 cd(baseDir)
 % set session information  
-% baseDir='/oak/stanford/groups/kalanit/biac2/kgs/projects/psych224/';
 experimentData = fullfile('data','subj02');
+mainDataFile = '8bars_images.mat';
 
-% paramPath =fullfile('Stimuli','8bars_params.mat');
-% imgPath = fullfile('Stimuli','8bars_images.mat');
-
+% Set the location of the 3D Anatomy file
 anatSubjPth = fullfile('.','3DAnatomy','t1.nii.gz');
 setVAnatomyPath(anatSubjPth);
 
@@ -39,10 +31,8 @@ pRF_init(baseDir, experimentData);
 subjectDir=fullfile(baseDir,experimentData);
 cd(subjectDir)
 
-% stim = load('./Stimuli/8bars_images.mat');
-% implay(stim.images,4)
-
-toon_showStim(fullfile('.','Stimuli','8bars_images.mat'))
+% Show a frame-by-frame of the results of the experiment
+toon_showStim(fullfile('.','Stimuli'), mainDataFile)
 
 %% Quality check
 cd(subjectDir)
@@ -64,6 +54,7 @@ toon_motionCorrect(baseDir, expt);
 toon_2gray(baseDir, expt)
 
 %% run CSS pRF model
-imgPath= fullfile('Stimuli','8bars_images.mat');
-paramPath = fullfile('Stimuli','8bars_params.mat');
+imgPath= fullfile('Stimuli',mainDataFile);
+paramPath = fullfile('Stimuli',mainDataFile);
+
 toon_prfRun(baseDir, experimentData, [], paramPath, imgPath)
