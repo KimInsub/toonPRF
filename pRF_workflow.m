@@ -6,8 +6,12 @@
 % cd /oak/stanford/groups/kalanit/biac2/kgs/projects/insub/toonPRF
 % addpath(genpath('/Users/insubkim/spm12'));
 
+
 % initialize
 baseDir = initPath();
+
+% Vistasoft is the set of tools provided by Vistalab for analyzing MR
+% images
 
 % clone Vistasoft from github
 if ~exist('./vistasoft', 'dir')
